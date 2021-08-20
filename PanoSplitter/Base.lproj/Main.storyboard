@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PanoSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bj4-fL-7Rs">
+                                <rect key="frame" x="20" y="282" width="374" height="332"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HEi-eM-s4e">
+                                    <size key="itemSize" width="375" height="320"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="9c1-wW-qXg">
+                                        <rect key="frame" x="0.0" y="6" width="375" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="111" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTa-rz-yu6">
+                                                    <rect key="frame" x="0.0" y="-15" width="375" height="349"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="375" height="320"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Pkn-JS-kLj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fy9-fP-Zco"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aep-6L-JZm" userLabel="Select Image Button">
+                                <rect key="frame" x="172" y="137" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0zI-Yr-JsE"/>
+                                    <constraint firstAttribute="width" constant="70" id="u3O-Zf-Xjd"/>
+                                </constraints>
+                                <state key="normal" image="AddImage"/>
+                                <connections>
+                                    <action selector="selectImageButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nH-RW-Eoo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-Vf-9os" userLabel="Upload Image Button">
+                                <rect key="frame" x="177" y="727" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="CqP-Ln-2Qu"/>
+                                    <constraint firstAttribute="width" constant="60" id="V2t-Ne-WKo"/>
+                                    <constraint firstAttribute="height" constant="60" id="Xcp-Ie-xlo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="a1r-kS-pzD"/>
+                                </constraints>
+                                <state key="normal" image="InstagramImage"/>
+                                <connections>
+                                    <action selector="launchInstagramClicked:" destination="BYZ-38-t0r" eventType="touchDown" id="4Yf-x9-S10"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bj4-fL-7Rs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="238" id="2oq-S9-d2B" userLabel="Slider Collection View.top = topMargin + 138"/>
+                            <constraint firstItem="bj4-fL-7Rs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6E0-ym-Ctr"/>
+                            <constraint firstItem="bj4-fL-7Rs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AqV-Ij-3d3"/>
+                            <constraint firstItem="bj4-fL-7Rs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LXt-e6-USn"/>
+                            <constraint firstItem="Aep-6L-JZm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UT6-MO-1uh"/>
+                            <constraint firstItem="dBN-Vf-9os" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ygn-na-XOK"/>
+                            <constraint firstItem="bj4-fL-7Rs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gJw-Ls-svq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="dBN-Vf-9os" secondAttribute="bottom" constant="75" id="ogt-2B-jbR"/>
+                            <constraint firstItem="bj4-fL-7Rs" firstAttribute="top" secondItem="Aep-6L-JZm" secondAttribute="bottom" constant="75" id="pca-Na-5rh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="selectImageButton" destination="Aep-6L-JZm" id="eJ4-Tf-UC0"/>
+                        <outlet property="sliderCollectionView" destination="bj4-fL-7Rs" id="tta-WO-4zl"/>
+                        <outlet property="uploadImageButton" destination="dBN-Vf-9os" id="q0c-IF-OI9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <collectionViewFlowLayout scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Omf-rb-5Ce">
+                    <size key="itemSize" width="374" height="320"/>
+                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </collectionViewFlowLayout>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AddImage" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="InstagramImage" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
